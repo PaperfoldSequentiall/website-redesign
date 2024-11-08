@@ -1,13 +1,11 @@
-import { useState } from 'react'
 import './App.css'
+import Home from './pages/home/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <div>
-            <h1>Welcome to the Company Website Redesign</h1>
-
+      <Home />
     </div>
   )
 }
