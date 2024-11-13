@@ -1,27 +1,50 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import './header.scss';
 import logo from '../../assets/company-logo.png';
 
-
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="header">
       <div className="logo">
-      <img src={logo} alt="Paperfold Logo" />
+        <NavLink to="/">
+          <img src={logo} alt="Company Logo" />
+        </NavLink>
       </div>
-      <nav className="nav-links">
-        <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#about">About us</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#blog">Blog</a>
+
+      
+      <div className={`hamburger-menu ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
+        <span className="hamburger-line"></span>
+        <span className="hamburger-line"></span>
+        <span className="hamburger-line"></span>
+      </div>
+
+      <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
+        <NavLink exact to="/" activeClassName="active">Home</NavLink>
+        <NavLink to="/services" activeClassName="active">Services</NavLink>
+        <NavLink to="/about" activeClassName="active">About Us</NavLink>
+        <NavLink to="/portfolio" activeClassName="active">Portfolio</NavLink>
+        <NavLink to="/blog" activeClassName="active">Blog</NavLink>
+        
+        {isMenuOpen && (
+          <a href="/get-in-touch" className="get-in-touch">
+            Get in Touch
+          </a>
+        )}
       </nav>
+
       <a href="/get-in-touch" className="contact-btn">
         <span className="btn-background"></span>
         <span className="btn-text" data-text="Get in Touch">Get in Touch</span>
       </a>
     </div>
   );
-}
+};
 
 export default Header;
