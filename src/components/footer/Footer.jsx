@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer.scss';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/company-logo.png';
 
 
@@ -12,7 +13,10 @@ const Footer = () => {
           <div className="contact-section">
           <button className="start-project-btn">
   <span className="btn-background"></span>
-  <span className="btn-text" data-text="Start Your Project">Start Your Project</span>
+  <span className="btn-text" data-text="Start Your Project">
+  <NavLink to="/contact">Start Your Project</NavLink>
+
+  </span>
 </button>
   <a href="mailto:paperfoldinfotech@gmail.com" className="email-link">paperfoldinfotech@gmail.com</a>
 </div>
@@ -41,9 +45,9 @@ const Footer = () => {
           <ul>
             <li>Portfolio</li>
             <li>Clients</li>
-            <li>About Us</li>
+            <li><NavLink to="/about">About Us</NavLink></li>
             <li>Blog</li>
-            <li>Career</li>
+            <li><NavLink to="/career">Careers</NavLink></li>
           </ul>
         </div>
       </div>
@@ -72,8 +76,8 @@ const Footer = () => {
       </div>
       <div className="footer-legal">
         <ul>
-          <li>Privacy Policy</li>
-          <li>Terms & Condition</li>
+        <li><NavLink to="/privacy">Privacy Policy</NavLink></li>
+        <li><NavLink to="/terms">Terms & Condition</NavLink></li>
           <li>Sitemap</li>
         </ul>
         <p>Copyright © 2024 PaperfoldSequential All Rights Reserved.</p>

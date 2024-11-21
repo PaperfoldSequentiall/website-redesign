@@ -54,6 +54,11 @@
             color: #AD8D18;
             transition: color 0.3s ease;
 
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
+
             &::after {
               content: attr(data-text);
               position: absolute;
@@ -105,26 +110,43 @@
     .footer-section {
       flex: 1;
       margin-left: 6.25rem;
+    
       h4 {
         font-size: 1.2rem;
         margin-bottom: 0.5rem;
         color: #b3b3b3;
       }
+    
       ul {
         list-style: none;
         padding: 0;
+    
         li {
           margin-bottom: 0.5rem;
           color: #ddd;
           font-size: 0.9rem;
           cursor: pointer;
+    
           &:hover {
             color: #ad8d18;
           }
         }
       }
     }
-  }
+    
+    .footer-section ul li a {
+      color: #ddd;
+      text-decoration: none; 
+    }
+    
+    .footer-section ul li a:hover {
+      color: #ad8d18; 
+    }
+    
+    .footer-section ul li a.active {
+      color: #ddd; 
+    }
+  }    
   @media (max-width: 768px) {
     .footer-top {
       flex-direction: column;
@@ -134,6 +156,8 @@
     .footer-top-left {
       width: 100%;
       margin-bottom: 2rem;
+      margin-right: 0 !important;
+
   
       h2 {
         font-size: 2rem;
@@ -197,7 +221,18 @@
       list-style-position: outside;
       margin-left: 0;
       margin-right: 1.5rem; 
+
+      
     }
+    .footer-section ul li a {
+      color: #ddd; // Same color as other text
+      text-decoration: none; // Remove underline
+    }
+    
+    .footer-section ul li a:hover {
+      color: #ad8d18; // Hover color consistent with other items
+    }
+    
   }
   
   @media (max-width: 576px) {
@@ -206,6 +241,8 @@
   
       .footer-top-left h2 {
         font-size: 1.9rem;
+        margin-right: 0 !important;
+
       }
   
       .start-project-btn {
@@ -235,6 +272,7 @@
   
       .footer-top-left h2 {
         font-size: 1.9rem;
+        margin-right: 0 !important;
       }
   
       .start-project-btn {
@@ -367,6 +405,7 @@
     font-size: 0.875rem;
     font-weight: 500;
     color: #bbb;
+  
     ul {
       list-style: none;
       display: flex;
@@ -374,11 +413,22 @@
       gap: 1.125rem;
       padding: 0;
       margin: 0 0 2.5rem 0;
+  
       li {
         cursor: pointer;
         color: #ddd;
+  
+        a {
+          text-decoration: none; 
+          color: #ddd;
+  
+          &:hover {
+            color: #ad8d18;
+          }
+        }
       }
     }
+  
     p {
       color: #888;
       font-size: 0.875rem;
@@ -386,6 +436,7 @@
       margin-bottom: 1.25rem;
     }
   }
+  
   
 @media (max-width: 768px) {
   .footer-bottom {

@@ -34,14 +34,16 @@ const Header = () => {
         
         {isMenuOpen && (
           <a href="/get-in-touch" className="get-in-touch">
-            Get in Touch
+              <NavLink to="/contact">Get in Touch</NavLink>
+
           </a>
         )}
       </nav>
 
       <a href="/get-in-touch" className="contact-btn">
         <span className="btn-background"></span>
-        <span className="btn-text" data-text="Get in Touch">Get in Touch</span>
+        <span className="btn-text" data-text="Get in Touch">  <NavLink to="/contact">Get in Touch</NavLink>
+        </span>
       </a>
     </div>
   );

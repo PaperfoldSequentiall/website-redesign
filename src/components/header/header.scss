@@ -76,6 +76,12 @@
       color: #AD8D18;
       transition: color 0.3s ease;
 
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+
       &::after {
         content: attr(data-text);
         position: absolute;
@@ -130,28 +136,28 @@
       transition: all 0.3s ease-in-out;
   
       &:nth-child(1) {
-        top: 0; /* Top line */
+        top: 0; 
       }
   
       &:nth-child(2) {
-        top: 0.5rem; /* Middle line */
+        top: 0.5rem;
       }
   
       &:nth-child(3) {
-        top: 1rem; /* Bottom line */
+        top: 1rem;
       }
     }
   
     &.active .hamburger-line:nth-child(1) {
-      transform: translateY(0.5rem) rotate(45deg); /* Transform top line to one half of "X" */
+      transform: translateY(0.5rem) rotate(45deg); 
     }
   
     &.active .hamburger-line:nth-child(2) {
-      opacity: 0; /* Hide middle line */
+      opacity: 0; 
     }
   
     &.active .hamburger-line:nth-child(3) {
-      transform: translateY(-0.5rem) rotate(-45deg); /* Transform bottom line to other half of "X" */
+      transform: translateY(-0.5rem) rotate(-45deg); 
     }
   }
   
