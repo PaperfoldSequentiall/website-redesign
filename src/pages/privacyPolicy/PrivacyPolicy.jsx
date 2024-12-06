@@ -2,6 +2,7 @@ import React from 'react';
 import './privacyPolicy.scss';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
+import GetInTouch from '../../components/getInTouch/GetInTouch';
 
 const PrivacyPolicy = () => {
   return (
@@ -45,6 +46,7 @@ const PrivacyPolicy = () => {
           <p>We use your information solely to improve our services and customize user experiences...</p>
         </section>
       </main>
+      <GetInTouch />
       <Footer />
     </div>
   );

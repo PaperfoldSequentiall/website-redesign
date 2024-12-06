@@ -2,6 +2,7 @@ import React from 'react';
 import './terms.scss';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
+import GetInTouch from '../../components/getInTouch/GetInTouch';
 
 const Terms = () => {
   return (
@@ -51,7 +52,7 @@ const Terms = () => {
           <p>These terms are governed by the laws of India, and any disputes will be settled in Indian courts.</p>
         </section>
       </main>
-
+      <GetInTouch />
       <Footer />
     </div>
   );

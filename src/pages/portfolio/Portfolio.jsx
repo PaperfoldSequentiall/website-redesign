@@ -1,17 +1,18 @@
-import React from 'react'
-import './portfolio.scss';
-import Header from '../../components/header/Header';
-import Footer from '../../components/footer/Footer';
-
-
+import React from "react";
+import "./portfolio.scss";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
+import GetInTouch from "../../components/getInTouch/GetInTouch";
 
 const Portfolio = () => {
   return (
-    <div className='portfolio'>
-      <Header/>
+    <div className="portfolio">
+      <Header />
       Portfolio
-      <Footer/></div>
-  )
-}
+      <GetInTouch />
+      <Footer />
+    </div>
+  );
+};
 
-export default Portfolio
+export default Portfolio;

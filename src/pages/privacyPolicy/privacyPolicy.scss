@@ -55,37 +55,37 @@
           }
   
           &.personal-info {
-            background-color: #FDEEDC; 
+            background-color: #fff; 
           }
   
           &.usage-data {
-            background-color: #E8F5E9; 
+            background-color: #fff; 
           }
   
           &.cookies {
-            background-color: #E3F2FD; 
+            background-color: #fff; 
           }
   
           &.log-data {
-            background-color: #FFF3E0; 
+            background-color: #fff; 
           }
   
           &.service-providers {
-            background-color: #E1F5FE; 
+            background-color: #fff; 
           }
   
           &.security {
-            background-color: #E8F5E9; 
+            background-color: #fff; 
           }
   
           &:hover {
             transform: translateY(-10px);
             box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-            background-color: #fff;
+            background-color: #E1F5FE;
           }
   
           h3:hover {
-            color: #AD8D18;
+            color: #11465f;
           }
         }
       }

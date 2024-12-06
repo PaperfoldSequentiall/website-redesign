@@ -27,7 +27,7 @@
         gap: 2rem;
   
         .card {
-            background-color: #D6EAF8; 
+            background-color: #fff; 
             padding: 2rem;
           border-radius: 10px;
           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -46,6 +46,7 @@
           }
   
           &:hover {
+            background-color: #E1F5FE;
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
           }

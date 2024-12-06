@@ -1,10 +1,34 @@
-import React from 'react';
+import React, { useState } from "react";
 import './footer.scss';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/company-logo.png';
 
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  const handleSubmit = () => {
+    // Email validation regex
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    // Check if email is valid
+    if (emailPattern.test(email)) {
+      // Simulate storing the email in localStorage
+      const subscriptions = JSON.parse(localStorage.getItem("newsletterSubscriptions")) || [];
+      subscriptions.push(email);
+      localStorage.setItem("newsletterSubscriptions", JSON.stringify(subscriptions));
+
+      setMessage("Thank you for signing up!");
+      setEmail(""); // Clear the input field
+    } else {
+      setMessage("Please enter a valid email address.");
+    }
+  };
   return (
     <footer className="footer">
       <div className="footer-top">
@@ -68,9 +92,21 @@ const Footer = () => {
   <h4>SIGN UP FOR OUR NEWSLETTER</h4>
   <p>Stay updated with the latest from Paperfold!</p>
   <div className="input-container">
-    <input type="email" placeholder="Your Email Address" />
-    <span className="icon">›</span>
-  </div>
+        <input
+          type="email"
+          placeholder="Your Email Address"
+          value={email}
+          onChange={handleEmailChange}
+        />
+        <span className="icon" onClick={handleSubmit}>
+          ›
+        </span>
+      </div>
+      {message && (
+        <div style={{ marginTop: "10px", color: message.includes("Thank you") ? "green" : "red" }}>
+          {message}
+        </div>
+      )}
 </div>
 
       </div>

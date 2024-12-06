@@ -18,7 +18,6 @@ const Header = () => {
         </NavLink>
       </div>
 
-      
       <div className={`hamburger-menu ${isMenuOpen ? 'active' : ''}`} onClick={toggleMenu}>
         <span className="hamburger-line"></span>
         <span className="hamburger-line"></span>
@@ -26,25 +25,56 @@ const Header = () => {
       </div>
 
       <nav className={`nav-links ${isMenuOpen ? 'active' : ''}`}>
-        <NavLink exact to="/" activeClassName="active">Home</NavLink>
-        <NavLink to="/services" activeClassName="active">Services</NavLink>
-        <NavLink to="/about" activeClassName="active">About Us</NavLink>
-        <NavLink to="/portfolio" activeClassName="active">Portfolio</NavLink>
-        <NavLink to="/blog" activeClassName="active">Blog</NavLink>
-        
-        {isMenuOpen && (
-          <a href="/get-in-touch" className="get-in-touch">
-              <NavLink to="/contact">Get in Touch</NavLink>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/services"
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          Services
+        </NavLink>
+        <NavLink
+          to="/about"
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          About Us
+        </NavLink>
+        <NavLink
+          to="/portfolio"
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          Portfolio
+        </NavLink>
+        <NavLink
+          to="/blog"
+          className={({ isActive }) => (isActive ? 'active' : '')}
+        >
+          Blog
+        </NavLink>
 
-          </a>
+        {isMenuOpen && (
+          <NavLink
+            to="/contact"
+            className={({ isActive }) => (isActive ? 'active get-in-touch' : 'get-in-touch')}
+          >
+            Get in Touch
+          </NavLink>
         )}
       </nav>
 
-      <a href="/get-in-touch" className="contact-btn">
+      <NavLink
+        to="/contact"
+        className={({ isActive }) => (isActive ? 'active contact-btn' : 'contact-btn')}
+      >
         <span className="btn-background"></span>
-        <span className="btn-text" data-text="Get in Touch">  <NavLink to="/contact">Get in Touch</NavLink>
+        <span className="btn-text" data-text="Get in Touch">
+          Get in Touch
         </span>
-      </a>
+      </NavLink>
     </div>
   );
 };

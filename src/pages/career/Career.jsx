@@ -2,8 +2,9 @@ import React from 'react';
 import './career.scss';
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
-import hero from '../../assets/career-hero.png';
-import avatar1 from '../../assets/avatar1.png';
+import hero from '../../assets/career-hero.webp';
+import avatar1 from '../../assets/avatar1.webp';
+import GetInTouch from '../../components/getInTouch/GetInTouch';
 
 const Career = () => {
   return (
@@ -56,7 +57,7 @@ const Career = () => {
 </button>
 
       </section>
-
+      <GetInTouch />
       <Footer />
     </div>
   );
