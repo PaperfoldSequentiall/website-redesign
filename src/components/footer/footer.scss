@@ -27,7 +27,6 @@
           justify-content: center;
           width: 11.2rem;
           height: 2.5rem;
-          font-family: 'Outfit', sans-serif;
           font-size: 0.875rem;
           font-weight: bold;
           color: #AD8D18;
@@ -225,12 +224,12 @@
       
     }
     .footer-section ul li a {
-      color: #ddd; // Same color as other text
-      text-decoration: none; // Remove underline
+      color: #ddd; 
+      text-decoration: none; 
     }
     
     .footer-section ul li a:hover {
-      color: #ad8d18; // Hover color consistent with other items
+      color: #ad8d18; 
     }
     
   }
