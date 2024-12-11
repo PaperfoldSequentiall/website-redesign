@@ -76,7 +76,10 @@ const GetInTouch = () => {
             </label>
           </div>
           <button className="getInTouch__submit" type="submit">
-            Submit!
+            <span className="btn-background"></span>
+            <span className="btn-text" data-text="Submit!">
+              Submit!
+            </span>
           </button>
         </form>
       </div>

@@ -81,7 +81,12 @@ const ContactUs = () => {
                     I agree to the privacy policy
                   </label>
                 </div>
-                <button type="submit">Submit</button>
+                <button className="getInTouch__submit" type="submit">
+                  <span className="btn-background"></span>
+                  <span className="btn-text" data-text="Submit">
+                    Submit
+                  </span>
+                </button>
               </div>
             </form>
           </div>
