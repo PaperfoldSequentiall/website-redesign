@@ -47,20 +47,27 @@ const GetInTouch = () => {
             placeholder="Phone Number"
             className="getInTouch__input"
           />
-          <select className="getInTouch__input">
-            <option disabled selected>
+          <select className="getInTouch__input" defaultValue="">
+            <option value="" disabled>
               Services
             </option>
-            <option>Web Development</option>
-            <option>Mobile App Development</option>
-            <option>Social Media Marketing</option>
-            <option>Performance Management</option>
-            <option>UI/UX Design</option>
-            <option>Graphic Design</option>
-            <option>Logo & Branding</option>
-            <option>Product Packaging</option>
-            <option>Video Production</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Mobile App Development">
+              Mobile App Development
+            </option>
+            <option value="Social Media Marketing">
+              Social Media Marketing
+            </option>
+            <option value="Performance Management">
+              Performance Management
+            </option>
+            <option value="UI/UX Design">UI/UX Design</option>
+            <option value="Graphic Design">Graphic Design</option>
+            <option value="Logo & Branding">Logo & Branding</option>
+            <option value="Product Packaging">Product Packaging</option>
+            <option value="Video Production">Video Production</option>
           </select>
+
           <textarea
             placeholder="Type Your Message here!"
             className="getInTouch__textarea"
