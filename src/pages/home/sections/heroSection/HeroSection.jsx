@@ -1,9 +1,10 @@
+import "./heroSection.scss"
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
-import heroVideo from "../../assets/hero-section.mp4";
-import vector127 from "../../assets/vector127.png";
-import vector126 from "../../assets/vector126.png";
-import vector128 from "../../assets/vector128.png";
+import heroVideo from "../../../../assets/hero-section.mp4";
+import vector127 from "../../../../assets/vector127.png";
+import vector126 from "../../../../assets/vector126.png";
+import vector128 from "../../../../assets/vector128.png";
 
 const HeroSection = () => {
   return (
