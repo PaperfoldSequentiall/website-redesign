@@ -1,37 +1,38 @@
-import React, { useState, useRef, useEffect } from "react";
-import { motion } from "framer-motion";
-import "./aboutUs.scss";
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
-import hero from "../../assets/about-hero.webp";
-import design from "../../assets/design-icon.webp";
-import develop from "../../assets/develop-icon.webp";
-import deploy from "../../assets/deploy-icon.webp";
-import maintain from "../../assets/maintain-icon.webp";
-import research from "../../assets/research.webp";
-import optimize from "../../assets/optimize.webp";
-import solution from "../../assets/solution.webp";
-import avatar2 from "../../assets/avatar2.webp";
-import sanjivani from "../../assets/sanjivani.webp";
-import aniket from "../../assets/aniket.webp";
-import sherin from "../../assets/sherin.webp";
-import kajal from "../../assets/kajal.webp";
-import visionImage from "../../assets/visionImage.webp";
-import GetInTouch from "../../components/getInTouch/GetInTouch";
+import React, { useState, useRef, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import './aboutUs.scss';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
+import hero from '../../assets/about-hero.webp';
+import design from '../../assets/design-icon.webp';
+import develop from '../../assets/develop-icon.webp';
+import deploy from '../../assets/deploy-icon.webp';
+import maintain from '../../assets/maintain-icon.webp';
+import research from '../../assets/research.webp';
+import optimize from '../../assets/optimize.webp';
+import solution from '../../assets/solution.webp';
+import avatar2 from '../../assets/avatar2.webp';
+import sanjivani from '../../assets/sanjivani.webp';
+import aniket from '../../assets/aniket.webp';
+import sherin from '../../assets/sherin.webp';
+import kajal from '../../assets/kajal.webp';
+import kalpesh from '../../assets/kalpesh.webp';
+import visionImage from '../../assets/visionImage.webp';
+import GetInTouch from '../../components/getInTouch/GetInTouch';
 
 const accordionItems = [
   {
-    title: "Vision",
+    title: 'Vision',
     content:
-      "At Paperfold, our vision is to revolutionize content creation through innovation and technology. We strive to empower brands with impactful digital experiences, driving growth and creativity in a rapidly changing world. With a passion for excellence, we aim to shape the future of storytelling, where possibilities are endless.",
+      'At Paperfold, our vision is to revolutionize content creation through innovation and technology. We strive to empower brands with impactful digital experiences, driving growth and creativity in a rapidly changing world. With a passion for excellence, we aim to shape the future of storytelling, where possibilities are endless.',
   },
   {
-    title: "Mission",
+    title: 'Mission',
     content:
-      "At Paperfold, our mission is to transform the digital landscape by delivering innovative content solutions that inspire and engage. We are dedicated to helping our clients tell their unique stories through creative strategies, building lasting relationships, and driving impactful results. Our commitment to excellence ensures we provide exceptional value in every project we undertake.",
+      'At Paperfold, our mission is to transform the digital landscape by delivering innovative content solutions that inspire and engage. We are dedicated to helping our clients tell their unique stories through creative strategies, building lasting relationships, and driving impactful results. Our commitment to excellence ensures we provide exceptional value in every project we undertake.',
   },
   {
-    title: "Milestone",
+    title: 'Milestone',
     content: `2021: We took our first steps towards global recognition, expanding our reach to new markets and forming strategic collaborations to enhance our content solutions.  
 2022: We broadened our service offerings and received industry accolades for our dedication to exceptional storytelling and digital experiences.  
 2023: We continued to grow, establishing new offices and digital hubs that fostered innovation and creative breakthroughs. Our focus on sustainability and social responsibility shaped our approach, helping us build stronger relationships with clients and communities.  
@@ -42,32 +43,32 @@ const accordionItems = [
 // team data
 const teamMembers = [
   {
-    name: "Sanjivani Divekar",
-    role: "UI/UX Designer",
+    name: 'Sanjivani Divekar',
+    role: 'UI/UX Designer',
     image: sanjivani,
 
-    linkedin: "#",
+    linkedin: '#',
   },
   {
-    name: "Aniket Khese",
-    role: "Marketing Manager",
+    name: 'Aniket Khese',
+    role: 'Marketing Manager',
     image: aniket,
 
-    linkedin: "#",
+    linkedin: '#',
   },
   {
-    name: "Sherin Paul",
-    role: "Full Stack Developer",
+    name: 'Sherin Paul',
+    role: 'Full Stack Developer',
     image: sherin,
 
-    linkedin: "https://www.linkedin.com/in/sherinann",
+    linkedin: 'https://www.linkedin.com/in/sherinann',
   },
   {
-    name: "Kajal Soni",
-    role: "Marketing Intern",
-    image: kajal,
+    name: 'Kalpesh Parab',
+    role: 'Full Stack Developer',
+    image: kalpesh,
 
-    linkedin: "https://www.linkedin.com/in/kajal-soni371",
+    linkedin: 'https://www.linkedin.com/in/kalpesh-parab-a53369202',
   },
 ];
 
@@ -109,7 +110,7 @@ const AboutUs = () => {
       { threshold: 0.5 }
     );
 
-    const section = document.querySelector(".empowered-team");
+    const section = document.querySelector('.empowered-team');
     if (section) {
       observer.observe(section);
     }
@@ -145,7 +146,7 @@ const AboutUs = () => {
       if (visionSectionRef.current && imageRef.current) {
         const sectionHeight = visionSectionRef.current.offsetHeight;
         const accordionHeight =
-          visionSectionRef.current.querySelector(".accordion").offsetHeight;
+          visionSectionRef.current.querySelector('.accordion').offsetHeight;
         const imageHeight = imageRef.current.offsetHeight;
         const position =
           (Math.max(sectionHeight, accordionHeight) - imageHeight) / 2;
@@ -165,12 +166,12 @@ const AboutUs = () => {
     };
   }, [openIndex]);
   return (
-    <div className="aboutUs">
+    <div className='aboutUs'>
       <Header />
       {/* HERO SECTION */}
-      <section className="hero-section">
-        <img src={hero} alt="About Hero" className="hero-image" />
-        <div className="hero-text">
+      <section className='hero-section'>
+        <img src={hero} alt='About Hero' className='hero-image' />
+        <div className='hero-text'>
           <h1>About Us</h1>
           <p>
             Paperfold is a dynamic IT company offering design, development, and
@@ -182,61 +183,61 @@ const AboutUs = () => {
 
       {/* ABOUT COMPANY CONTENT */}
 
-      <section className="about-content">
-        <div className="intro-text">
+      <section className='about-content'>
+        <div className='intro-text'>
           <h2>
-            Driving Your Business <span className="highlight">Forward</span>{" "}
+            Driving Your Business <span className='highlight'>Forward</span>{' '}
             with Technology
           </h2>
-          <p className="main-paragraph">
+          <p className='main-paragraph'>
             We are a premier IT company focused on offering customized solutions
             and services that enable your business to achieve its goals. With
             seamless integration, scalable growth, and exceptional support, we
             guide you at every step towards success.
           </p>
-          <p className="sub-paragraph">Curious to learn more?</p>
-          <p className="sub-paragraph">
+          <p className='sub-paragraph'>Curious to learn more?</p>
+          <p className='sub-paragraph'>
             Join us for a quick overview of what we can do for you.
           </p>
         </div>
 
-        <div className="avatars">
-          <img src={avatar2} alt="Avatar 2" className="avatar" />
+        <div className='avatars'>
+          <img src={avatar2} alt='Avatar 2' className='avatar' />
         </div>
       </section>
 
       {/* VISION MISSION ACCORDION */}
-      <section className="vision-section" ref={visionSectionRef}>
+      <section className='vision-section' ref={visionSectionRef}>
         <img
           src={visionImage}
-          alt="Vision Image"
-          className="vision-image"
+          alt='Vision Image'
+          className='vision-image'
           ref={imageRef}
         />
-        <div className="accordion">
+        <div className='accordion'>
           {accordionItems.map((item, index) => (
             <div
               key={index}
-              className={`accordion-item ${openIndex === index ? "open" : ""}`}
+              className={`accordion-item ${openIndex === index ? 'open' : ''}`}
             >
               <div
-                className="accordion-title"
+                className='accordion-title'
                 onClick={() => toggleAccordion(index)}
               >
                 <h3>{item.title}</h3>
-                <span className="plus-icon">
-                  {openIndex === index ? "-" : "+"}
+                <span className='plus-icon'>
+                  {openIndex === index ? '-' : '+'}
                 </span>
               </div>
-              <div className="accordion-content">
-                {item.title === "Milestone" ? (
-                  item.content.split("\n").map((line, idx) => {
-                    const [year, ...description] = line.split(":");
+              <div className='accordion-content'>
+                {item.title === 'Milestone' ? (
+                  item.content.split('\n').map((line, idx) => {
+                    const [year, ...description] = line.split(':');
                     return (
-                      <div key={idx} className="milestone-entry">
-                        <span className="milestone-year">{year.trim()}:</span>
-                        <p className="milestone-description">
-                          {description.join(":").trim()}
+                      <div key={idx} className='milestone-entry'>
+                        <span className='milestone-year'>{year.trim()}:</span>
+                        <p className='milestone-description'>
+                          {description.join(':').trim()}
                         </p>
                       </div>
                     );
@@ -245,21 +246,21 @@ const AboutUs = () => {
                   <p>{item.content}</p>
                 )}
               </div>
-              {index < accordionItems.length - 1 && <div className="divider" />}
+              {index < accordionItems.length - 1 && <div className='divider' />}
             </div>
           ))}
         </div>
       </section>
 
       {/* ABOUT US / SERVICES SECTION */}
-      <section className="about-us">
-        <h1 className="section-title">
-          Comprehensive <span className="highlight">IT Solutions</span>, All in
+      <section className='about-us'>
+        <h1 className='section-title'>
+          Comprehensive <span className='highlight'>IT Solutions</span>, All in
           One Place
         </h1>
-        <div className="services">
-          <div className="service">
-            <img src={design} alt="Design Icon" />
+        <div className='services'>
+          <div className='service'>
+            <img src={design} alt='Design Icon' />
             <h2>DESIGN</h2>
             <p>
               We collaborate with you to understand your challenges and explore
@@ -267,24 +268,24 @@ const AboutUs = () => {
               design for your needs.
             </p>
           </div>
-          <div className="service">
-            <img src={develop} alt="Develop Icon" />
+          <div className='service'>
+            <img src={develop} alt='Develop Icon' />
             <h2>DEVELOP</h2>
             <p>
               This is where the magic happens. We craft and strategize the most
               effective solutions to help your business thrive.
             </p>
           </div>
-          <div className="service">
-            <img src={deploy} alt="Deploy Icon" />
+          <div className='service'>
+            <img src={deploy} alt='Deploy Icon' />
             <h2>DEPLOY</h2>
             <p>
               Our work doesn’t end at delivery. We engage with you to align on
               future goals and ensure your project’s ongoing success.
             </p>
           </div>
-          <div className="service">
-            <img src={maintain} alt="Maintain Icon" />
+          <div className='service'>
+            <img src={maintain} alt='Maintain Icon' />
             <h2>MAINTAIN</h2>
             <p>
               Count on us to nurture and protect your solutions, ensuring
@@ -295,11 +296,11 @@ const AboutUs = () => {
       </section>
 
       {/* EMPOWERED TEAM SECTION */}
-      <section className="empowered-team">
-        <div className="content">
+      <section className='empowered-team'>
+        <div className='content'>
           <h1>
             Empowered Team – <br />
-            Turning <span className="highlight">Ideas</span> into <br />
+            Turning <span className='highlight'>Ideas</span> into <br />
             Reality
           </h1>
           <p>
@@ -308,88 +309,88 @@ const AboutUs = () => {
             success for our clients.
           </p>
         </div>
-        <div className="skills">
-          <div className="skill">
-            <div className="skill-header">
+        <div className='skills'>
+          <div className='skill'>
+            <div className='skill-header'>
               <span>Design</span>
-              <span className="percentage">80%</span>
+              <span className='percentage'>80%</span>
             </div>
-            <div className="bar design">
+            <div className='bar design'>
               {isVisible && (
                 <motion.div
-                  className="progress"
-                  style={{ width: "80%" }}
+                  className='progress'
+                  style={{ width: '80%' }}
                   initial={{ width: 0 }}
-                  animate={{ width: "80%" }}
-                  transition={{ duration: 2, ease: "linear" }}
+                  animate={{ width: '80%' }}
+                  transition={{ duration: 2, ease: 'linear' }}
                 />
               )}
             </div>
           </div>
-          <div className="skill">
-            <div className="skill-header">
+          <div className='skill'>
+            <div className='skill-header'>
               <span>Development</span>
-              <span className="percentage">65%</span>
+              <span className='percentage'>65%</span>
             </div>
-            <div className="bar development">
+            <div className='bar development'>
               {isVisible && (
                 <motion.div
-                  className="progress"
-                  style={{ width: "65%" }}
+                  className='progress'
+                  style={{ width: '65%' }}
                   initial={{ width: 0 }}
-                  animate={{ width: "65%" }}
-                  transition={{ duration: 2, ease: "linear" }}
+                  animate={{ width: '65%' }}
+                  transition={{ duration: 2, ease: 'linear' }}
                 />
               )}
             </div>
           </div>
-          <div className="skill">
-            <div className="skill-header">
+          <div className='skill'>
+            <div className='skill-header'>
               <span>Digital Marketing</span>
-              <span className="percentage">80%</span>
+              <span className='percentage'>80%</span>
             </div>
-            <div className="bar digital-marketing">
+            <div className='bar digital-marketing'>
               {isVisible && (
                 <motion.div
-                  className="progress"
-                  style={{ width: "80%" }}
+                  className='progress'
+                  style={{ width: '80%' }}
                   initial={{ width: 0 }}
-                  animate={{ width: "80%" }}
-                  transition={{ duration: 2, ease: "linear" }}
+                  animate={{ width: '80%' }}
+                  transition={{ duration: 2, ease: 'linear' }}
                 />
               )}
             </div>
           </div>
-          <div className="skill">
-            <div className="skill-header">
+          <div className='skill'>
+            <div className='skill-header'>
               <span>PPC Management</span>
-              <span className="percentage">58%</span>
+              <span className='percentage'>58%</span>
             </div>
-            <div className="bar ppc-management">
+            <div className='bar ppc-management'>
               {isVisible && (
                 <motion.div
-                  className="progress"
-                  style={{ width: "58%" }}
+                  className='progress'
+                  style={{ width: '58%' }}
                   initial={{ width: 0 }}
-                  animate={{ width: "58%" }}
-                  transition={{ duration: 2, ease: "linear" }}
+                  animate={{ width: '58%' }}
+                  transition={{ duration: 2, ease: 'linear' }}
                 />
               )}
             </div>
           </div>
-          <div className="skill">
-            <div className="skill-header">
+          <div className='skill'>
+            <div className='skill-header'>
               <span>Video Production</span>
-              <span className="percentage">70%</span>
+              <span className='percentage'>70%</span>
             </div>
-            <div className="bar video-production">
+            <div className='bar video-production'>
               {isVisible && (
                 <motion.div
-                  className="progress"
-                  style={{ width: "70%" }}
+                  className='progress'
+                  style={{ width: '70%' }}
                   initial={{ width: 0 }}
-                  animate={{ width: "70%" }}
-                  transition={{ duration: 2, ease: "linear" }}
+                  animate={{ width: '70%' }}
+                  transition={{ duration: 2, ease: 'linear' }}
                 />
               )}
             </div>
@@ -398,98 +399,98 @@ const AboutUs = () => {
       </section>
 
       {/* COUNTER SECTION */}
-      <section className="counter-section" ref={counterSectionRef}>
-        <div className="counter-row">
-          <div className="counter-item">
+      <section className='counter-section' ref={counterSectionRef}>
+        <div className='counter-row'>
+          <div className='counter-item'>
             <motion.div
-              className="number"
+              className='number'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
               {count.design}
             </motion.div>
-            <p className="label">Design</p>
+            <p className='label'>Design</p>
           </div>
-          <div className="counter-item">
+          <div className='counter-item'>
             <motion.div
-              className="number"
+              className='number'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
               {count.development}
             </motion.div>
-            <p className="label">Development</p>
+            <p className='label'>Development</p>
           </div>
-          <div className="counter-item">
+          <div className='counter-item'>
             <motion.div
-              className="number"
+              className='number'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
               {count.digitalMarketing}
             </motion.div>
-            <p className="label">Digital Marketing</p>
+            <p className='label'>Digital Marketing</p>
           </div>
-          <div className="counter-item">
+          <div className='counter-item'>
             <motion.div
-              className="number"
+              className='number'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
               {count.ppcManagement}
             </motion.div>
-            <p className="label">PPC Management</p>
+            <p className='label'>PPC Management</p>
           </div>
-          <div className="counter-item">
+          <div className='counter-item'>
             <motion.div
-              className="number"
+              className='number'
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1 }}
             >
               {count.videoProduction}
             </motion.div>
-            <p className="label">Video Production</p>
+            <p className='label'>Video Production</p>
           </div>
         </div>
       </section>
 
       {/* STEPS  */}
 
-      <section className="steps-section">
-        <div className="steps-header">
+      <section className='steps-section'>
+        <div className='steps-header'>
           <h2>
-            Let us guide you through our{" "}
-            <span className="highlight">process</span>
+            Let us guide you through our{' '}
+            <span className='highlight'>process</span>
           </h2>
           <p>
             Discover how we turn ideas into impactful solutions, step by step
           </p>
         </div>
-        <div className="steps-content">
-          <div className="step">
+        <div className='steps-content'>
+          <div className='step'>
             <motion.div
-              className="step-image"
+              className='step-image'
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <img src={research} alt="Research" />
-              <div className="overlay-text">RESEARCH</div>
+              <img src={research} alt='Research' />
+              <div className='overlay-text'>RESEARCH</div>
             </motion.div>
             <motion.div
-              className="step-description"
+              className='step-description'
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <span className="step-number">1</span>
+              <span className='step-number'>1</span>
               <div>
                 <h3>First things,</h3>
                 <p>
@@ -504,25 +505,25 @@ const AboutUs = () => {
             </motion.div>
           </div>
 
-          <div className="step">
+          <div className='step'>
             <motion.div
-              className="step-image"
+              className='step-image'
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <img src={solution} alt="Solution" />
-              <div className="overlay-text">SOLUTION</div>
+              <img src={solution} alt='Solution' />
+              <div className='overlay-text'>SOLUTION</div>
             </motion.div>
             <motion.div
-              className="step-description"
+              className='step-description'
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <span className="step-number">2</span>
+              <span className='step-number'>2</span>
               <div>
                 <h3>Next up,</h3>
                 <p>
@@ -537,25 +538,25 @@ const AboutUs = () => {
             </motion.div>
           </div>
 
-          <div className="step">
+          <div className='step'>
             <motion.div
-              className="step-image"
+              className='step-image'
               initial={{ x: -100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <img src={optimize} alt="Optimize" />
-              <div className="overlay-text">OPTIMIZE</div>
+              <img src={optimize} alt='Optimize' />
+              <div className='overlay-text'>OPTIMIZE</div>
             </motion.div>
             <motion.div
-              className="step-description"
+              className='step-description'
               initial={{ x: 100, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <span className="step-number">3</span>
+              <span className='step-number'>3</span>
               <div>
                 <h3>And it doesn’t stop there.</h3>
                 <p>
@@ -575,28 +576,28 @@ const AboutUs = () => {
 
       {/* OUR TEAM */}
 
-      <section className="our-team-section">
-        <div className="team-header">
+      <section className='our-team-section'>
+        <div className='team-header'>
           <h2>
-            Meet Our <span className="highlight">Team</span>
+            Meet Our <span className='highlight'>Team</span>
           </h2>
           <p>The Creative Minds Powering Paperfold’s Success</p>
         </div>
-        <div className="team-content">
+        <div className='team-content'>
           {teamMembers.map((member, index) => (
-            <div className="team-card" key={index}>
-              <div className="profile-pic">
+            <div className='team-card' key={index}>
+              <div className='profile-pic'>
                 <img src={member.image} alt={member.name} />
               </div>
-              <h3 className="team-name">{member.name}</h3>
-              <p className="team-role">{member.role}</p>
-              <div className="social-links">
+              <h3 className='team-name'>{member.name}</h3>
+              <p className='team-role'>{member.role}</p>
+              <div className='social-links'>
                 <a
                   href={member.linkedin}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  target='_blank'
+                  rel='noopener noreferrer'
                 >
-                  <i className="fab fa-linkedin-in"></i>
+                  <i className='fab fa-linkedin-in'></i>
                 </a>
               </div>
             </div>

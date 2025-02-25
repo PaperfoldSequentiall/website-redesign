@@ -130,5 +130,61 @@
         font-size: 0.9rem;
       }
     }
+    @media (min-width: 1440px) {
+      .privacy-content {
+        padding: 3rem;
+        max-width: 1400px;
+      }
+  
+      .intro-section h1 {
+        font-size: 3rem;
+      }
+  
+      .info-cards {
+        gap: 3rem;
+  
+        .card {
+          flex: 1 1 28%;
+          padding: 2.5rem;
+        }
+      }
+  
+      .detailed-info h2 {
+        font-size: 2rem;
+      }
+  
+      .detailed-info p {
+        font-size: 1.2rem;
+      }
+    }
+  
+    // For 1920px screens
+    @media (min-width: 1920px) {
+      .privacy-content {
+        padding: 4rem;
+        max-width: 1600px;
+      }
+  
+      .intro-section h1 {
+        font-size: 3.5rem;
+      }
+  
+      .info-cards {
+        gap: 3.5rem;
+  
+        .card {
+          flex: 1 1 25%;
+          padding: 3rem;
+        }
+      }
+  
+      .detailed-info h2 {
+        font-size: 2.2rem;
+      }
+  
+      .detailed-info p {
+        font-size: 1.3rem;
+      }
+    }
   }
   

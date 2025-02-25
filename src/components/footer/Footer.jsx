@@ -13,18 +13,18 @@ const Footer = () => {
   };
 
   const handleSubmit = () => {
-    // Email validation regex
+   
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    // Check if email is valid
+  
     if (emailPattern.test(email)) {
-      // Simulate storing the email in localStorage
+     
       const subscriptions = JSON.parse(localStorage.getItem("newsletterSubscriptions")) || [];
       subscriptions.push(email);
       localStorage.setItem("newsletterSubscriptions", JSON.stringify(subscriptions));
 
       setMessage("Thank you for signing up!");
-      setEmail(""); // Clear the input field
+      setEmail("");
     } else {
       setMessage("Please enter a valid email address.");
     }

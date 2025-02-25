@@ -1,119 +1,162 @@
 .terms {
-    .terms-content {
-      padding: 3rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      color: #333;
-  
-      .intro-section {
-        text-align: center;
-        margin-bottom: 3rem;
-  
-        h1 {
-          color: #222;
-          font-size: 2.5rem;
-          text-transform: uppercase;
-        }
-  
-        p {
-          font-size: 1.2rem;
-          color: #666;
-        }
+  .terms-content {
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: #333;
+
+    .intro-section {
+      text-align: center;
+      margin-bottom: 3rem;
+
+      h1 {
+        color: #222;
+        font-size: 2.5rem;
+        text-transform: uppercase;
       }
-  
-      .terms-details {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-  
-        .card {
-            background-color: #fff; 
-            padding: 2rem;
-          border-radius: 10px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          transition: transform 0.3s ease, box-shadow 0.3s ease;
-          color: #333;
-  
-          h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #333;
-          }
-  
-          p {
-            font-size: 1rem;
-            color: #555;
-          }
-  
-          &:hover {
-            background-color: #E1F5FE;
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-          }
-        }
+
+      p {
+        font-size: 1.2rem;
+        color: #666;
       }
-  
-      
-      .footer-note {
-        text-align: center;
-        margin-top: 3rem;
-  
-        h3 {
+    }
+
+    .terms-details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+
+      .card {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: #333;
+
+        h2 {
           font-size: 1.5rem;
+          margin-bottom: 1rem;
           color: #333;
         }
-  
+
         p {
-          font-size: 1.1rem;
+          font-size: 1rem;
           color: #555;
         }
-      }
-    }
-  
-    
-    @media (max-width: 768px) {
-      .terms-content {
-        padding: 2rem;
-  
-        .terms-details {
-          grid-template-columns: 1fr;
-        }
-        margin-bottom: 40px;
 
+        &:hover {
+          background-color: #e1f5fe;
+          transform: translateY(-10px);
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+
+    .footer-note {
+      text-align: center;
+      margin-top: 3rem;
+
+      h3 {
+        font-size: 1.5rem;
+        color: #333;
       }
 
-    }
-  
-    @media (max-width: 576px) {
-      .terms-content {
-        padding: 1.5rem;
-  
-        .intro-section h1 {
-          font-size: 2rem;
-        }
-  
-        .terms-details .card {
-          padding: 1.5rem;
-        }
-  
-        .footer-note h3 {
-          font-size: 1.3rem;
-        }
-      }
-    }
-  
-    @media (max-width: 480px) {
-      .terms-content {
-        padding: 1rem;
-  
-        .intro-section h1 {
-          font-size: 1.8rem;
-        }
-  
-        .footer-note h3 {
-          font-size: 1.2rem;
-        }
+      p {
+        font-size: 1.1rem;
+        color: #555;
       }
     }
   }
-  
+
+  @media (max-width: 768px) {
+    .terms-content {
+      padding: 2rem;
+
+      .terms-details {
+        grid-template-columns: 1fr;
+      }
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .terms-content {
+      padding: 1.5rem;
+
+      .intro-section h1 {
+        font-size: 2rem;
+      }
+
+      .terms-details .card {
+        padding: 1.5rem;
+      }
+
+      .footer-note h3 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .terms-content {
+      padding: 1rem;
+
+      .intro-section h1 {
+        font-size: 1.8rem;
+      }
+
+      .footer-note h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  @media (min-width: 1440px) {
+    .terms-content {
+      padding: 3rem;
+      max-width: 1400px;
+    }
+
+    .intro-section h1 {
+      font-size: 3rem;
+    }
+
+    .terms-details {
+      gap: 3rem;
+
+      .card {
+        padding: 2.5rem;
+        border-radius: 12px;
+      }
+    }
+
+    .footer-note h3 {
+      font-size: 1.7rem;
+    }
+  }
+
+  // For 1920px screens
+  @media (min-width: 1920px) {
+    .terms-content {
+      padding: 4rem;
+      max-width: 1600px;
+    }
+
+    .intro-section h1 {
+      font-size: 3.5rem;
+    }
+
+    .terms-details {
+      gap: 3.5rem;
+
+      .card {
+        padding: 3rem;
+        border-radius: 15px;
+      }
+    }
+
+    .footer-note h3 {
+      font-size: 2rem;
+    }
+  }
+}

@@ -438,4 +438,86 @@
       }
     }
   }
+  // For 1440px screens
+@media (min-width: 1440px) {
+  .contact-form-section {
+    padding: 5rem 8rem;
+    display: flex;
+    justify-content: space-between;
+
+    .form-container {
+      flex-direction: row;
+
+      .form-left {
+        h2 {
+          font-size: 56px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+
+      .form-right {
+        h3 {
+          font-size: 56px;
+        }
+
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+  .hero-section {
+    height: 550px;
+
+    .hero-text h1 {
+      font-size: 60px;
+    }
+  }
+}
+
+// For 1920px screens
+@media (min-width: 1920px) {
+  .contact-form-section {
+    padding: 6rem 10rem;
+    display: flex;
+    justify-content: space-between;
+
+    .form-container {
+      flex-direction: row;
+
+      .form-left {
+        h2 {
+          font-size: 64px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+
+      .form-right {
+        h3 {
+          font-size: 64px;
+        }
+
+        p {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .hero-section {
+    height: 600px;
+
+    .hero-text h1 {
+      font-size: 72px;
+    }
+  }
+}
+
 }

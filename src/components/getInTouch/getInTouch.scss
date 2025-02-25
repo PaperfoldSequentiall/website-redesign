@@ -24,7 +24,6 @@
     }
 
     & .getInTouch__heading {
-      
       font-weight: 500;
       font-size: 32px;
       color: #0f0f0f;
@@ -32,7 +31,6 @@
     }
 
     & .getInTouch__description {
-      
       font-weight: 400;
       font-size: 16px;
       color: #0f0f0f;
@@ -46,7 +44,7 @@
         display: flex;
         align-items: center;
         gap: 1rem;
-        
+
         font-size: 16px;
         color: #0f0f0f;
 
@@ -72,7 +70,7 @@
       background-color: transparent;
       border: 1px solid #ad8d187c;
       border-radius: 10px;
-      
+
       font-size: 14px;
       color: #545469;
       padding: 0.5rem;
@@ -113,7 +111,6 @@
       }
 
       & .getInTouch__label {
-        
         font-size: 14px;
         color: #ad8d18;
       }
@@ -127,8 +124,8 @@
       font-weight: 500;
       height: 50px;
       width: 93%;
-      color: #f3f3f3; 
-      background-color: #ad8d18; 
+      color: #f3f3f3;
+      background-color: #ad8d18;
       border: 0.0625rem solid #ad8d18;
       border-radius: 1.5625rem;
       cursor: pointer;
@@ -136,28 +133,28 @@
       text-align: center;
       transition: color 0.3s ease, background-color 0.3s ease;
     }
-    
+
     .getInTouch__submit .btn-background {
       position: absolute;
       inset: 0;
-      background-color: #f3f3f3; 
+      background-color: #f3f3f3;
       transform: translateY(100%);
       transition: transform 0.6s ease-out;
       z-index: 1;
     }
-    
+
     .getInTouch__submit .btn-text {
       position: relative;
       z-index: 2;
-      color: #f3f3f3; 
+      color: #f3f3f3;
       transition: color 0.3s ease;
     }
-    
+
     .getInTouch__submit .btn-text a {
       text-decoration: none;
       color: inherit;
     }
-    
+
     .getInTouch__submit .btn-text::after {
       content: attr(data-text);
       position: absolute;
@@ -170,115 +167,266 @@
       transition: transform 0.6s ease-out;
       z-index: 1;
     }
-    
+
     .getInTouch__submit:hover .btn-background {
-      transform: translateY(0); 
+      transform: translateY(0);
     }
-    
+
     .getInTouch__submit:hover .btn-text {
-      color: #ad8d18; 
+      color: #ad8d18;
     }
-    
+
     .getInTouch__submit:hover .btn-text::after {
-      transform: translateY(100%); 
+      transform: translateY(100%);
     }
-    
+
     .getInTouch__submit:not(:hover) .btn-background {
       transform: translateY(100%);
     }
-    
+
     .getInTouch__submit:not(:hover) .btn-text::after {
       transform: translateY(0);
     }
-    
-  }
-  
- 
-@media (max-width: 768px) {
-  .getInTouch__description,
-  .getInTouch__contact-item span,
-  .getInTouch__form .getInTouch__input:nth-child(4), 
-  .getInTouch__textarea,
-  .getInTouch__icon,
-  .getInTouch__checkbox-container {
-    display: none;
   }
 
-  .getInTouch__container {
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
+  // MEDIA QUERY FOR GET IN TOUCH
+
+  @media (min-width: 1366px) and (max-width: 1440px) {
+    &__container {
+      gap: 5rem;
+      padding: 3rem;
+    }
+
+    &__info {
+      margin-left: 2.5rem;
+
+      .getInTouch__image {
+        width: 350px;
+        height: 330px;
+      }
+
+      .getInTouch__heading {
+        font-size: 36px;
+      }
+
+      .getInTouch__description {
+        font-size: 18px;
+      }
+
+      .getInTouch__contact-item {
+        font-size: 18px;
+
+        .getInTouch__icon {
+          font-size: 26px;
+        }
+      }
+    }
+
+    &__form {
+      gap: 1.5rem;
+
+      .getInTouch__input,
+      .getInTouch__textarea {
+        max-width: 450px;
+        font-size: 16px;
+      }
+
+      .getInTouch__submit {
+        height: 55px;
+        font-size: 18px;
+      }
+    }
   }
 
-  .getInTouch__info {
-    margin-left: 0;
-    text-align: center;
+  @media (min-width: 1441px) and (max-width: 1920px) {
+    padding: 4rem;
+
+    &__container {
+      gap: 6rem;
+      padding: 4rem;
+    }
+
+    &__info {
+      margin-left: 3rem;
+
+      .getInTouch__image {
+        width: 400px;
+        height: 380px;
+      }
+
+      .getInTouch__heading {
+        font-size: 40px;
+      }
+
+      .getInTouch__description {
+        font-size: 20px;
+      }
+
+      .getInTouch__contact-item {
+        font-size: 20px;
+
+        .getInTouch__icon {
+          font-size: 28px;
+        }
+      }
+    }
+
+    &__form {
+      gap: 2rem;
+
+      .getInTouch__input,
+      .getInTouch__textarea {
+        max-width: 500px;
+        font-size: 18px;
+        height: 60px;
+      }
+
+      .getInTouch__textarea {
+        height: 120px;
+      }
+
+      .getInTouch__submit {
+        height: 60px;
+        font-size: 20px;
+      }
+    }
   }
 
-  .getInTouch__image {
-    width: 300px;
-    height: auto;
+  @media (min-width: 1921px) {
+    padding: 5rem;
+
+    &__container {
+      gap: 8rem;
+      padding: 5rem;
+    }
+
+    &__info {
+      margin-left: 4rem;
+
+      .getInTouch__image {
+        width: 500px;
+        height: 450px;
+      }
+
+      .getInTouch__heading {
+        font-size: 48px;
+      }
+
+      .getInTouch__description {
+        font-size: 22px;
+      }
+
+      .getInTouch__contact-item {
+        font-size: 22px;
+
+        .getInTouch__icon {
+          font-size: 30px;
+        }
+      }
+    }
+
+    &__form {
+      gap: 2.5rem;
+
+      .getInTouch__input,
+      .getInTouch__textarea {
+        max-width: 600px;
+        font-size: 20px;
+        height: 70px;
+      }
+
+      .getInTouch__textarea {
+        height: 140px;
+      }
+
+      .getInTouch__submit {
+        height: 70px;
+        font-size: 22px;
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .getInTouch__description,
+    .getInTouch__contact-item span,
+    .getInTouch__form .getInTouch__input:nth-child(4),
+    .getInTouch__textarea,
+    .getInTouch__icon,
+    .getInTouch__checkbox-container {
+      display: none;
+    }
+
+    .getInTouch__container {
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    .getInTouch__info {
+      margin-left: 0;
+      text-align: center;
+    }
+
+    .getInTouch__image {
+      width: 300px;
+      height: auto;
+    }
+
+    .getInTouch__heading {
+      font-size: 24px;
+      color: #f3f3f3;
+      margin-top: -170px;
+      margin-bottom: 80px;
+    }
+
+    .getInTouch__form {
+      width: 100%;
+      align-items: center;
+    }
   }
 
-  .getInTouch__heading {
-    font-size: 24px;
-    color: #f3f3f3;
-    margin-top: -170px;
-    margin-bottom: 80px;
+  @media (max-width: 576px) {
+    .getInTouch__container {
+      padding: 1rem;
+    }
+
+    .getInTouch__image {
+      width: 250px;
+    }
+
+    .getInTouch__heading {
+      font-size: 20px;
+      color: #f3f3f3;
+      margin-top: -140px;
+      margin-bottom: 50px;
+    }
+
+    .getInTouch__form .getInTouch__input,
+    .getInTouch__form .getInTouch__submit {
+      max-width: 100%;
+    }
   }
 
-  .getInTouch__form {
-    width: 100%;
-    align-items: center;
-  }
-}
+  @media (max-width: 480px) {
+    .getInTouch {
+      padding: 0rem !important;
+      margin: 0 !important;
+    }
+    .getInTouch__container {
+      padding: 1rem !important;
+    }
+    .getInTouch__image {
+      width: 200px;
+    }
 
+    .getInTouch__heading {
+      font-size: 18px;
+      color: #f3f3f3;
+      margin-top: -110px;
+    }
 
-@media (max-width: 576px) {
-  .getInTouch__container {
-    padding: 1rem;
+    .getInTouch__form .getInTouch__submit {
+      height: 45px;
+      font-size: 14px;
+    }
   }
-
-  .getInTouch__image {
-    width: 250px;
-  }
-
-  .getInTouch__heading {
-    font-size: 20px;
-    color: #f3f3f3;
-    margin-top: -140px;
-    margin-bottom: 50px;
-  }
-
-
-  .getInTouch__form .getInTouch__input,
-  .getInTouch__form .getInTouch__submit {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .getInTouch {
-    padding: 0rem !important;
-    margin: 0 !important;
-  }
-  .getInTouch__container {
-    padding: 1rem !important;
-  }
-  .getInTouch__image {
-    width: 200px;
-  }
-
-  .getInTouch__heading {
-    font-size: 18px;
-    color: #f3f3f3;
-    margin-top: -110px;
-  }
-
-  .getInTouch__form .getInTouch__submit {
-    height: 45px;
-    font-size: 14px;
-  }
-}
-
 }
