@@ -1,0 +1,190 @@
+.hero-section {
+  position: relative;
+  height: 650px;
+  display: flex;
+  align-items: center;
+  padding: 8rem 10rem;
+  overflow: hidden;
+
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .hero-content {
+    flex: 1;
+    color: #ffffff;
+    text-align: left;
+
+    .hero-title {
+      font-size: 56px;
+      font-weight: 600;
+      width: 700px;
+      margin-bottom: 30px;
+    }
+
+    .hero-subtitle {
+      font-size: 22px;
+      font-weight: 500;
+      margin-bottom: 80px;
+      width: 500px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 30px;
+
+      .contact-btn {
+        text-decoration: none;
+        position: relative;
+        display: inline-block;
+        padding: 0.7rem 3rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #ad8d18;
+        background-color: transparent;
+        border: 0.1rem solid #ad8d18;
+        border-radius: 2rem;
+        cursor: pointer;
+        overflow: hidden;
+        text-align: center;
+        transition: color 0.3s ease, border-color 0.3s ease;
+
+        .btn-background {
+          position: absolute;
+          inset: 0;
+          background-color: #ad8d18;
+          transform: translateY(100%);
+          transition: transform 0.6s ease-out;
+          z-index: 1;
+        }
+
+        .btn-text {
+          position: relative;
+          z-index: 2;
+          color: #ad8d18;
+          transition: color 0.3s ease;
+
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+
+          &::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            color: transparent;
+            transform: translateY(0);
+            transition: transform 0.6s ease-out;
+            z-index: 1;
+          }
+        }
+
+        &:hover .btn-background {
+          transform: translateY(0);
+        }
+
+        &:hover .btn-text {
+          color: #fff;
+        }
+
+        &:hover .btn-text::after {
+          transform: translateY(100%);
+        }
+
+        &:not(:hover) .btn-background {
+          transform: translateY(100%);
+        }
+
+        &:not(:hover) .btn-text::after {
+          transform: translateY(0);
+        }
+      }
+
+      .portfolio-link {
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+        color: #ffffff;
+        padding: 12px 24px;
+        transition: text-decoration 0.3s;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .hero-animation {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .vector {
+      position: absolute;
+    }
+
+    .vector-127 {
+      width: 75px;
+      bottom: 9px;
+      left: 261px;
+      height: 180px;
+    }
+
+    .vector-126 {
+      width: 75px;
+      top: 5px;
+      left: 380px;
+      height: 180px;
+    }
+
+    .vector-128 {
+      width: 200px;
+      left: 258px;
+      height: 160px;
+    }
+
+    .services {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+
+      .service {
+        font-size: 28px;
+        font-weight: 500;
+        color: #ffffff;
+      }
+
+      .service-design {
+        position: absolute;
+        left: 80px;
+        bottom: 80px;
+      }
+
+      .service-development {
+        position: absolute;
+        right: 120px;
+        top: 40px;
+        transform: translateY(-50%);
+      }
+
+      .service-digital-marketing {
+        position: absolute;
+        left: 120px;
+        top: 100px;
+        width: 220px;
+      }
+    }
+  }
+}

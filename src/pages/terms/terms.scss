@@ -1,0 +1,121 @@
+.terms {
+  .terms-content {
+    padding: 4rem; 
+    max-width: 1400px; 
+    margin: 0 auto;
+    color: #333;
+  
+    .intro-section {
+      text-align: center;
+      margin-bottom: 4rem;
+  
+      h1 {
+        color: #222;
+        font-size: 3rem;
+        text-transform: uppercase;
+      }
+  
+      p {
+        font-size: 1.4rem; 
+        color: #666;
+        max-width: 900px; 
+        margin: 0 auto;
+      }
+    }
+  
+    .terms-details {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+  
+      .card {
+        background-color: #fff;
+        padding: 2.5rem; 
+        border-radius: 12px; 
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: #333;
+  
+        h2 {
+          font-size: 1.8rem; 
+          margin-bottom: 1.2rem;
+          color: #333;
+        }
+  
+        p {
+          font-size: 1.2rem; 
+          color: #555;
+          line-height: 1.7; 
+        }
+  
+        &:hover {
+          background-color: #e1f5fe;
+          transform: translateY(-12px); 
+          box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+      }
+    }
+  
+    .footer-note {
+      text-align: center;
+      margin-top: 4rem;
+  
+      h3 {
+        font-size: 1.8rem;
+        color: #333;
+      }
+  
+      p {
+        font-size: 1.3rem; 
+        color: #555;
+        max-width: 800px; 
+        margin: 0 auto;
+        line-height: 1.6;
+      }
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .terms-content {
+      padding: 2rem;
+
+      .terms-details {
+        grid-template-columns: 1fr;
+      }
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .terms-content {
+      padding: 1.5rem;
+
+      .intro-section h1 {
+        font-size: 2rem;
+      }
+
+      .terms-details .card {
+        padding: 1.5rem;
+      }
+
+      .footer-note h3 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .terms-content {
+      padding: 1rem;
+
+      .intro-section h1 {
+        font-size: 1.8rem;
+      }
+
+      .footer-note h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}

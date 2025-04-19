@@ -1,0 +1,189 @@
+.vision-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0rem 8rem 3rem 8rem;
+  margin-bottom: 5rem;
+
+  .vision-image {
+    width: 600px;
+    height: 450px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .accordion {
+    width: 650px;
+    border-radius: 12px;
+    background-color: #e6e8eb;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    padding: 3rem;
+    margin-top: 2.5rem;
+
+    .accordion-item {
+      padding: 1rem 0;
+
+      .accordion-title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        h3 {
+          font-size: 24px;
+          font-weight: 500;
+          color: #0f0f0f;
+          margin: 0;
+        }
+
+        .plus-icon {
+          font-size: 36px;
+          color: #ad8d18;
+          transition: transform 0.3s ease-in-out;
+        }
+      }
+
+      .accordion-content {
+        font-size: 18px;
+        color: #9d9d9d;
+        margin-top: 0.7rem;
+        font-weight: 400;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: max-height 0.4s cubic-bezier(0.25, 0.8, 0.25, 1),
+          opacity 0.3s ease, transform 0.3s ease;
+      }
+
+      &.open {
+        .accordion-content {
+          max-height: 600px;
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .divider {
+        height: 1px;
+        background-color: #d1cfcf;
+        margin-top: 1.2rem;
+      }
+
+      .milestone-entry {
+        margin-bottom: 1.2rem;
+
+        .milestone-year {
+          font-size: 18px;
+          font-weight: bold;
+          color: #000;
+          display: block;
+          margin-bottom: 0.6rem;
+        }
+
+        .milestone-description {
+          font-size: 18px;
+          color: #9d9d9d;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .vision-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+
+    .vision-image {
+      display: none;
+    }
+
+    .accordion {
+      width: 100%;
+      padding: 2rem;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .vision-section {
+    .vision-image {
+      display: none;
+    }
+
+    .accordion {
+      padding: 1.5rem;
+
+      .accordion-item {
+        padding: 0.6rem 0;
+
+        .accordion-title {
+          h3 {
+            font-size: 18px;
+          }
+
+          .plus-icon {
+            font-size: 28px;
+          }
+        }
+
+        .accordion-content {
+          font-size: 14px;
+        }
+
+        .milestone-entry {
+          .milestone-year {
+            font-size: 14px;
+          }
+
+          .milestone-description {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .vision-section {
+    .vision-image {
+      display: none;
+    }
+
+    .accordion {
+      padding: 1rem;
+
+      .accordion-item {
+        padding: 0.5rem 0;
+
+        .accordion-title {
+          h3 {
+            font-size: 16px;
+          }
+
+          .plus-icon {
+            font-size: 24px;
+          }
+        }
+
+        .accordion-content {
+          font-size: 13px;
+        }
+
+        .milestone-entry {
+          .milestone-year {
+            font-size: 13px;
+          }
+
+          .milestone-description {
+            font-size: 13px;
+          }
+        }
+      }
+    }
+  }
+}

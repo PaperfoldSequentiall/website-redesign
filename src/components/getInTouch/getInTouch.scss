@@ -1,0 +1,277 @@
+.getInTouch {
+  padding: 4rem;
+  background-color: transparent;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border: 1px dashed #ad8d187c;
+    padding: 3rem;
+    gap: 5rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  &__info {
+    flex: 1;
+    margin-left: 3rem;
+
+    & .getInTouch__image {
+      width: 350px;
+      height: 330px;
+    }
+
+    & .getInTouch__heading {
+      font-weight: 500;
+      font-size: 36px;
+      color: #0f0f0f;
+      margin: 1.5rem 0;
+    }
+
+    & .getInTouch__description {
+      font-weight: 400;
+      font-size: 18px;
+      color: #0f0f0f;
+      margin-bottom: 2rem;
+    }
+
+    & .getInTouch__contact {
+      margin-top: 1.5rem;
+
+      &-item {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+
+        font-size: 18px;
+        color: #0f0f0f;
+
+        & .getInTouch__icon {
+          font-size: 28px;
+          color: #ad8d18;
+        }
+      }
+    }
+  }
+
+  &__form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    & .getInTouch__input,
+    & .getInTouch__textarea {
+      width: 100%;
+      max-width: 450;
+      background-color: transparent;
+      border: 1.5px solid #ad8d187c;
+      border-radius: 12px;
+
+      font-size: 16px;
+      color: #545469;
+      padding: 0.7rem;
+      padding-left: 1.2rem;
+    }
+
+    & .getInTouch__textarea {
+      height: 120px;
+    }
+
+    & .getInTouch__checkbox-container {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+
+      & .getInTouch__checkbox {
+        width: 18px;
+        height: 18px;
+        border: 1px solid #ad8d18 !important;
+        cursor: pointer;
+        appearance: none;
+        outline: none;
+        position: relative;
+
+        &:checked {
+          background-color: #ad8d18 !important;
+          border-color: #ad8d18 !important;
+        }
+
+        &:checked::after {
+          content: "\2714";
+          position: absolute;
+          top: -2px;
+          left: 3px;
+          font-size: 14px;
+          color: #fff;
+        }
+      }
+
+      & .getInTouch__label {
+        font-size: 16px;
+        color: #ad8d18;
+      }
+    }
+
+    .getInTouch__submit {
+      position: relative;
+      display: inline-block;
+      padding: 0.7rem 3rem;
+      font-size: 1.2rem;
+      font-weight: 500;
+      height: 60px;
+      width: 95%;
+      color: #f3f3f3;
+      background-color: #ad8d18;
+      border: 0.1rem solid #ad8d18;
+      border-radius: 2rem;
+      cursor: pointer;
+      overflow: hidden;
+      text-align: center;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    .getInTouch__submit .btn-background {
+      position: absolute;
+      inset: 0;
+      background-color: #f3f3f3;
+      transform: translateY(100%);
+      transition: transform 0.6s ease-out;
+      z-index: 1;
+    }
+
+    .getInTouch__submit .btn-text {
+      position: relative;
+      z-index: 2;
+      color: #f3f3f3;
+      transition: color 0.3s ease;
+    }
+
+    .getInTouch__submit .btn-text a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .getInTouch__submit .btn-text::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      color: transparent;
+      transform: translateY(0);
+      transition: transform 0.6s ease-out;
+      z-index: 1;
+    }
+
+    .getInTouch__submit:hover .btn-background {
+      transform: translateY(0);
+    }
+
+    .getInTouch__submit:hover .btn-text {
+      color: #ad8d18;
+    }
+
+    .getInTouch__submit:hover .btn-text::after {
+      transform: translateY(100%);
+    }
+
+    .getInTouch__submit:not(:hover) .btn-background {
+      transform: translateY(100%);
+    }
+
+    .getInTouch__submit:not(:hover) .btn-text::after {
+      transform: translateY(0);
+    }
+  }
+
+  // MEDIA QUERY FOR GET IN TOUCH
+  @media (max-width: 768px) {
+    .getInTouch__description,
+    .getInTouch__contact-item span,
+    .getInTouch__form .getInTouch__input:nth-child(4),
+    .getInTouch__textarea,
+    .getInTouch__icon,
+    .getInTouch__checkbox-container {
+      display: none !important;
+    }
+
+    .getInTouch__container {
+      flex-direction: column !important;
+      align-items: center !important;
+      padding: 1.5rem !important;
+    }
+
+    .getInTouch__info {
+      margin-left: 0 !important;
+      text-align: center !important;
+    }
+
+    .getInTouch__image {
+      width: 300px !important;
+      height: auto !important;
+    }
+
+    .getInTouch__heading {
+      font-size: 24px !important;
+      color: #f3f3f3 !important;
+      margin-top: -170px !important;
+      margin-bottom: 80px !important;
+    }
+
+    .getInTouch__form {
+      width: 100% !important;
+      align-items: center !important;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .getInTouch__container {
+      padding: 1rem !important;
+    }
+
+    .getInTouch__image {
+      width: 250px !important;
+    }
+
+    .getInTouch__heading {
+      font-size: 20px !important;
+      color: #f3f3f3 !important;
+      margin-top: -140px !important;
+      margin-bottom: 50px !important;
+    }
+
+    .getInTouch__form .getInTouch__input,
+    .getInTouch__form .getInTouch__submit {
+      max-width: 100% !important;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .getInTouch {
+      padding: 0rem !important;
+      margin: 0 !important;
+    }
+    .getInTouch__container {
+      padding: 1rem !important;
+    }
+    .getInTouch__image {
+      width: 200px !important;
+      height: 200px !important;
+    }
+
+    .getInTouch__heading {
+      font-size: 18px !important;
+      color: #f3f3f3 !important;
+      margin-top: -110px !important;
+    }
+
+    .getInTouch__form .getInTouch__submit {
+      height: 45px !important;
+      font-size: 14px !important;
+    }
+  }
+}

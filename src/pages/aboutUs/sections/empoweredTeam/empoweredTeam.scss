@@ -1,0 +1,185 @@
+.empowered-team {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 6rem 8rem 4.5rem 8rem;
+  background-color: #fff;
+  color: #000;
+
+  .content {
+    flex: 1;
+    max-width: 45%;
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 600;
+      line-height: 1.5;
+
+      .highlight {
+        color: #b89c43;
+        font-weight: 700;
+      }
+    }
+
+    p {
+      width: 70%;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: #555;
+    }
+  }
+
+  .skills {
+    flex: 1;
+    max-width: 55%;
+
+    .skill {
+      margin-bottom: 2rem;
+
+      .skill-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.7rem;
+
+        span {
+          font-size: 1.4rem;
+          font-weight: 500;
+        }
+
+        .percentage {
+          font-size: 1.2rem;
+          font-weight: 600;
+        }
+      }
+
+      .bar {
+        background-color: #eaeaea;
+        border-radius: 8px;
+        overflow: hidden;
+        height: 12px;
+        position: relative;
+
+        &.design {
+          .progress {
+            background-color: #8a61ae;
+          }
+        }
+        &.development {
+          .progress {
+            background-color: #187ead;
+          }
+        }
+        &.digital-marketing {
+          .progress {
+            background-color: #e79109;
+          }
+        }
+        &.ppc-management {
+          .progress {
+            background-color: #ad185b;
+          }
+        }
+        &.video-production {
+          .progress {
+            background-color: #18ad76;
+          }
+        }
+
+        .progress {
+          height: 100%;
+          transition: width 0.4s ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .empowered-team {
+    flex-direction: column;
+    padding: 3rem 3rem 2.5rem 3rem;
+
+    .content {
+      max-width: 100%;
+      margin-bottom: 2rem;
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    .skills {
+      max-width: 100%;
+      width: 100%;
+
+      .skill {
+        .skill-header span {
+          font-size: 1.1rem;
+        }
+        .skill-header .percentage {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .empowered-team {
+    padding: 2rem 2rem 1.5rem 2rem;
+
+    .content {
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 0.85rem;
+      }
+    }
+
+    .skills {
+      .skill {
+        .skill-header span {
+          font-size: 1rem;
+        }
+        .skill-header .percentage {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .empowered-team {
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
+
+    .content {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.8rem;
+      }
+    }
+
+    .skills {
+      .skill {
+        .skill-header span {
+          font-size: 0.9rem;
+        }
+        .skill-header .percentage {
+          font-size: 0.75rem;
+        }
+      }
+    }
+  }
+}

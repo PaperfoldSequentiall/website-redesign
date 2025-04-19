@@ -1,0 +1,284 @@
+.steps-section {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 6rem 0rem;
+
+  .steps-header {
+    margin-bottom: 4rem;
+    text-align: left;
+    width: 600px;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #0f0f0f;
+
+      .highlight {
+        color: #ad8d18;
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #0f0f0f;
+      margin-top: 0.8rem;
+      width: 550px;
+    }
+  }
+
+  .steps-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+  .step {
+    display: flex;
+    gap: 10rem;
+    margin-bottom: 3rem;
+  }
+
+  .step:nth-child(odd) {
+    flex-direction: row;
+  }
+
+  .step:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+
+  .step-image {
+    position: relative;
+    width: 50%;
+    overflow: hidden;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .step-image img {
+    width: 600px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .step-image .overlay-text {
+    position: absolute;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  }
+
+  .step-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 65%;
+    margin: 0 auto;
+    gap: 1.2rem;
+
+    .step-number {
+      font-size: 12rem;
+      font-weight: 400;
+      color: transparent;
+      -webkit-text-stroke: 1.5px #ad8d18;
+      font-family: "Arial", sans-serif;
+      margin-right: 2rem;
+    }
+
+    div {
+      width: calc(100% - 4rem);
+    }
+
+    h3 {
+      font-size: 2.5rem;
+      font-weight: 500;
+      color: #000;
+      margin: 0 0 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      width: 95%;
+    }
+  }
+  
+@media (max-width: 768px) {
+  .steps-section {
+    padding: 1rem 1rem !important;
+  }
+
+  .steps-header {
+    width: 100%;
+    text-align: left;
+  }
+
+  .steps-header h2 {
+    font-size: 2rem;
+  }
+
+  .steps-header p {
+    font-size: 0.9rem;
+    width: 100%;
+  }
+
+  .steps-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .step:nth-child(odd),
+  .step:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .step-image {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 1rem;
+  }
+
+  .step-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .step-description {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    gap: 1rem;
+  }
+
+  .step-description .step-number {
+    font-size: 6rem;
+    margin-right: 1rem;
+  }
+
+  .step-description div {
+    width: calc(100% - 2.5rem);
+  }
+
+  .step-description h3 {
+    font-size: 1.6rem;
+  }
+
+  .step-description p {
+    font-size: 0.9rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .steps-section {
+    padding: 1rem 1rem !important;
+  }
+
+  .steps-header h2 {
+    font-size: 1.8rem;
+    padding: 0rem 1rem;
+  }
+
+  .steps-header p {
+    font-size: 0.8rem;
+    padding: 0rem 1rem;
+  }
+
+  .step {
+    gap: 1.5rem;
+  }
+
+  .step-image {
+    height: 220px;
+    padding: 0rem 1rem;
+  }
+
+  .step-description {
+    width: 90%;
+    gap: 1.2rem;
+  }
+
+  .step-description .step-number {
+    font-size: 5rem;
+  }
+
+  .step-description div {
+    width: calc(100% - 2rem);
+  }
+
+  .step-description h3 {
+    font-size: 1.4rem;
+  }
+
+  .step-description p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .steps-section {
+    padding: 0rem 1rem !important;
+  }
+
+  .steps-header h2 {
+    font-size: 1.6rem;
+    padding: 0rem 1rem;
+    
+  }
+
+  .steps-header p {
+    font-size: 0.75rem;
+    padding: 0rem 1rem;
+  }
+
+  .steps-content {
+    gap: 1.5rem;
+   
+  }
+
+  .step {
+    gap: 1rem;
+  }
+
+  .step-image {
+    height: 200px;
+    padding: 0rem 1rem;
+  }
+
+  .step-description {
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .step-description .step-number {
+    font-size: 4rem;
+    margin-right: 1rem;
+  }
+
+  .step-description div {
+    width: calc(100% - 2rem);
+  }
+
+  .step-description h3 {
+    font-size: 1.2rem;
+  }
+
+  .step-description p {
+    font-size: 0.8rem;
+  }
+}
+}
+

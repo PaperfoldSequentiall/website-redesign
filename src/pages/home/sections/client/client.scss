@@ -1,0 +1,91 @@
+.client {
+  padding-top: 80px;
+  padding-bottom: 100px;
+  background-color: #0f0f0f;
+  color: #f3f3f3;
+
+  .heading {
+    text-align: center;
+    margin-bottom: 80px;
+
+    h1 {
+      font-size: 64px;
+      font-weight: 600;
+      margin-bottom: 32px;
+
+      span {
+        color: #ad8d18;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .logo-scroller {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f3f3f3;
+    border-top: 1px solid #f3f3f3;
+    overflow: hidden;
+
+    .scroll-row {
+      display: flex;
+      gap: 30px;
+      white-space: nowrap;
+
+      &.left-to-right {
+        animation: scrollLeftToRight 18s linear infinite;
+      }
+
+      &.right-to-left {
+        animation: scrollRightToLeft 18s linear infinite;
+      }
+
+      .logo-box {
+        flex: 0 0 auto;
+        width: 400px;
+        height: 200px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 70%;
+          max-height: 70%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}
+
+@keyframes scrollLeftToRight {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes scrollRightToLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }

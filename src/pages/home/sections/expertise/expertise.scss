@@ -1,0 +1,156 @@
+.expertise {
+  padding: 80px 0px;
+  background-color: #0f0f0f;
+  color: #f3f3f3;
+
+  .heading {
+    text-align: center;
+    margin-bottom: 80px;
+
+    h1 {
+      font-size: 64px;
+      font-weight: 600;
+      margin-bottom: 32px;
+
+      span {
+        color: #ad8d18;
+      }
+    }
+
+    p {
+      font-size: 20px;
+      width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  .expertise-grid {
+   width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0px 160px;
+    position: relative;
+
+    .expertise-card-container {
+      position: relative;
+      width: 468px;
+      height: 180px;
+      gap: 50px;
+      border: 3px solid #ad8d18;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 300px;
+      background-color: transparent;
+
+      .expertise-card {
+        position: absolute;
+        top: -12px;
+        left: 20px;
+        z-index: 2;
+        width: 420px;
+        height: 380px;
+        border-radius: 12px;
+        overflow: hidden;
+        margin-top: -250px;
+        transition: background-color 0.3s ease;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          filter: brightness(80%);
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 0.5;
+          z-index: 1;
+        }
+
+        .before-title {
+          position: absolute;
+          bottom: 24px;
+          left: 24px;
+          font-size: 28px;
+          color: #ad8d18;
+          opacity: 1;
+          transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          padding: 24px;
+          z-index: 2;
+
+          h3 {
+            font-size: 28px;
+            font-weight: 500;
+            color: #ad8d18;
+            margin: 0;
+            transform: translateY(30px);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            opacity: 0;
+          }
+
+          p {
+            font-size: 18px;
+            margin: 12px 0 36px 0;
+            color: #f3f3f3;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+          }
+
+          .line {
+            width: 350px;
+            height: 3px;
+            background-color: #f3f3f3;
+            margin: 12px 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: transform 0.3s ease, opacity 0.3s ease;
+          }
+        }
+
+        &:hover {
+          background-color: #2b2b2b;
+
+          .overlay {
+            background-color: #2b2b2b;
+            h3,
+            p,
+            .line {
+              opacity: 1;
+              transform: translateY(0);
+            }
+
+            .before-title {
+              opacity: 1;
+              transform: translateY(0);
+            }
+
+            .after-title {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+        }
+      }
+    }
+  }
+}
