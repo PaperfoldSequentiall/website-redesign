@@ -1,0 +1,139 @@
+.People {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3.2% 5.68%;
+  gap: 2vh;
+
+  .heading {
+    color: #0f0f0f;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 2.917vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    span {
+      color: #ad8d18;
+    }
+  }
+
+  .desc {
+    color: var(--Black-color, #0f0f0f);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 1.041vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .quotes {
+    display: flex;
+    margin: 6vh 0;
+    gap: 1.041666vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .quote {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+
+      .box {
+        background: linear-gradient(180deg, #6e4e8b 0%, #250e3b 100%);
+        width: 28.49vw;
+        height: 32.566vh;
+        z-index: 1;
+
+        position: relative;
+
+        .qopen {
+          top: 4%;
+          left: 3%;
+          position: absolute;
+          width: 1.6668vw;
+          height: 3.51vh;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .text {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: var(--White-Color, #f3f3f3);
+          text-align: center;
+          font-family: Outfit;
+          font-size: 1.07vw;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          padding: 0 1.4323vw;
+        }
+
+        .qclose {
+          bottom: 4%;
+          right: 3%;
+          position: absolute;
+          width: 1.6668vw;
+          height: 3.51vh;
+
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      .triangle {
+        width: 0;
+        height: 0;
+        border-top: 5.4825vh solid transparent;
+        border-bottom: 5.4825vh solid transparent;
+        border-left: 5.209vw solid #250e3b;
+        rotate: 90deg;
+        position: absolute;
+        top: 27.5vh;
+      }
+
+      .hero {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.19298vh;
+        .image {
+          width: 4.1668vw;
+          height: 8.772vh;
+          margin-top: 8vh;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .name {
+          color: var(--Black-color, #0f0f0f);
+          text-align: center;
+          font-family: Outfit;
+          font-size: 1.041666vw;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+    }
+  }
+}
