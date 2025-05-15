@@ -1,0 +1,258 @@
+.ServiceComp {
+  display: flex;
+  padding: 3.2% 5.68%;
+
+  .services {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18vh;
+
+    .service {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      gap: 3vw;
+      .left {
+        width: 36.3vw;
+        position: relative;
+        height: 85vh;
+
+        .title {
+          position: absolute;
+          border-radius: 10px;
+          left: 0;
+          top: -6vh;
+          background: var(
+            --purple,
+            linear-gradient(144deg, #6e4e8b 6.59%, #3b175b 103.49%)
+          );
+          width: 28.49vw;
+          height: 13.7vh;
+          color: #fff;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 1;
+          font-family: Outfit;
+          font-size: 2.917vw;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+        .bigImage {
+          position: absolute;
+          width: 27.552vw;
+          right: 0;
+          height: 83.444vh;
+          border: 1px solid white;
+          border-radius: 40vw;
+          img {
+            border-radius: 40vw;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+        .smallImage {
+          position: absolute;
+          width: 15.99vw;
+          height: 47.26vh;
+          left: 0;
+          bottom: 1vh;
+          border: 0.5vw solid white;
+          border-radius: 40vw;
+
+          img {
+            border-radius: 40vw;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+
+        .arrow {
+          position: absolute;
+          left: -1vw;
+          top: 10vh;
+          img {
+            width: 13.1776vw;
+            height: 27.742vh;
+            object-fit: cover;
+          }
+        }
+      }
+      .right {
+        width: 47vw;
+        display: flex;
+        flex-direction: column;
+
+        .head {
+          color: #0f0f0f;
+          font-family: Outfit;
+          font-size: 2.396vw;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+
+        .desc {
+          color: #0f0f0f;
+          font-family: Outfit;
+          font-size: 1.0417vw;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          margin: 1vw 0;
+        }
+
+        .offer {
+          border: 0.104vw solid #ad8d18;
+          height: max-content;
+          min-height: 33.335vh;
+          padding: 2%;
+
+          .what {
+            color: #0f0f0f;
+            font-family: Outfit;
+            font-size: 1.666666vw;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+
+          .points {
+            display: flex;
+            gap: 4%;
+            padding: 2% 2%;
+            color: #0f0f0f;
+            font-family: Outfit;
+            font-size: 1.0417vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.4vw;
+          }
+        }
+
+        .mini {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5vw;
+          padding: 3% 0;
+          span {
+            color: #0f0f0f;
+            font-family: Outfit;
+            font-size: 1.666666vw;
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+          }
+          .proof {
+            color: #0f0f0f;
+            font-family: Outfit;
+            font-size: 1.0417vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+
+        .button {
+          width: 50%;
+          text-decoration: none;
+          position: relative;
+          display: inline-block;
+          padding: 0.6rem 3rem;
+          font-weight: 500;
+          color: #ad8d18;
+          background-color: transparent;
+          border: 0.104vw solid #ad8d18;
+          border-radius: 0.3vw;
+          cursor: pointer;
+          overflow: hidden;
+          text-align: center;
+          transition: color 0.3s ease, border-color 0.3s ease;
+
+          .btn-background {
+            position: absolute;
+            inset: 0;
+            background-color: #ad8d18;
+            transform: translateY(100%);
+            transition: transform 0.6s ease-out;
+            z-index: 1;
+          }
+
+          .btn-text {
+            position: relative;
+            z-index: 2;
+            color: #ad8d18;
+            transition: color 0.3s ease;
+            font-size: 0.8vw;
+
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
+
+            &::after {
+              content: attr(data-text);
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              color: transparent;
+              transform: translateY(0);
+              transition: transform 0.6s ease-out;
+              z-index: 1;
+            }
+          }
+
+          &:hover .btn-background {
+            transform: translateY(0);
+          }
+
+          &:hover .btn-text {
+            color: #fff;
+            font-size: 0.8vw;
+          }
+
+          &:hover .btn-text::after {
+            transform: translateY(100%);
+          }
+
+          &:not(:hover) .btn-background {
+            transform: translateY(100%);
+          }
+
+          &:not(:hover) .btn-text::after {
+            transform: translateY(0);
+            font-size: 0.8vw;
+          }
+        }
+      }
+      &.reverse {
+        flex-direction: row-reverse;
+
+        .left {
+          .title {
+            left: 8vw;
+            background: linear-gradient(144deg, #187ead 6.59%, #0a3447 103.49%);
+          }
+          .bigImage {
+            left: 0;
+          }
+          .arrow {
+            left: 24.5vw;
+            transform: scaleX(-1);
+          }
+          .smallImage {
+            left: 20vw;
+          }
+        }
+      }
+    }
+  }
+}
