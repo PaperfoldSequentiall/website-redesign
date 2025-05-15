@@ -1,7 +1,23 @@
 .ServiceComp {
   display: flex;
   padding: 3.2% 5.68%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7vw;
 
+  .mainHeader {
+    color: #ad8d18;
+    font-family: Outfit;
+    font-size: 2.917vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    span{
+      color: #0f0f0f;
+    }
+  }
   .services {
     width: 100%;
     display: flex;

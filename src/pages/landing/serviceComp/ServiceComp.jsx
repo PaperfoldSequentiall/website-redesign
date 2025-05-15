@@ -53,9 +53,15 @@ const ServiceComp = () => {
   ];
   return (
     <section className='ServiceComp'>
+      <div className='mainHeader'>
+        <span>OUR</span> SERVICES
+      </div>
       <div className='services'>
         {services.map((service, index) => (
-<div className={`service ${index % 2 !== 0 ? 'reverse' : ''}`} key={index}>
+          <div
+            className={`service ${index % 2 !== 0 ? 'reverse' : ''}`}
+            key={index}
+          >
             <div className='left'>
               <div className='title'>{service.title}</div>
               <div className='bigImage'>
