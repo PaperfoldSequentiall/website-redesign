@@ -2,6 +2,7 @@ import React from 'react';
 import LandingHeader from './landingHeader/LandingHeader';
 import LandingForm from './landingForm/LandingForm';
 import ServiceComp from './serviceComp/ServiceComp';
+import Work from './work/Work';
 
 const Landing = () => {
   return (
@@ -9,6 +10,7 @@ const Landing = () => {
       <LandingHeader />
       <LandingForm />
       <ServiceComp />
+      <Work />
     </>
   );
 };
