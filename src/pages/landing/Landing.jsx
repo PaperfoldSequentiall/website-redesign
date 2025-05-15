@@ -5,11 +5,11 @@ import ServiceComp from './serviceComp/ServiceComp';
 
 const Landing = () => {
   return (
-    <div>
+    <>
       <LandingHeader />
       <LandingForm />
       <ServiceComp />
-    </div>
+    </>
   );
 };
 
