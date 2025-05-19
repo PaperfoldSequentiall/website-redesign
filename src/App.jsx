@@ -44,7 +44,6 @@ function AppWrapper() {
         </Routes>
       </div>
       {!isLandingPage && <GetInTouch />}
-      {/* {!isLandingPage && <Footer />} */}
       <Footer />
     </>
   );

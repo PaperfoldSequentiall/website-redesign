@@ -1,5 +1,7 @@
 import './people.scss';
 import p1 from '../../../assets/landing/p1.png';
+import p2 from '../../../assets/landing/p2.png';
+import p3 from '../../../assets/landing/p3.png';
 import qopen from '../../../assets/landing/qopen.png';
 import qclose from '../../../assets/landing/qclose.png';
 
@@ -11,14 +13,14 @@ const People = () => {
       name: `Abhinav, Nanoswab Solutions.`,
     },
     {
-      text: `We Appreciate the amount of efforts Paperfold put to develop out technical infra. It's been 3 years and we are up and running smoothly.`,
-      hero: p1,
-      name: `Abhinav, Nanoswab Solutions.`,
+      text: `Paperfold has shown amazing team effort. They always have a unique approach towards things and come up with positive suggestions.`,
+      hero: p2,
+      name: `Tejaswini Patil, Proodos.`,
     },
     {
-      text: `We Appreciate the amount of efforts Paperfold put to develop out technical infra. It's been 3 years and we are up and running smoothly.`,
-      hero: p1,
-      name: `Abhinav, Nanoswab Solutions.`,
+      text: `Paperfold Regular updates and achieving in minimum time trame make our work even easier to plan ahead for the next phase. kudos to them !`,
+      hero: p3,
+      name: `Saket Dandotia, Linkites .`,
     },
   ];
   return (
@@ -46,9 +48,9 @@ const People = () => {
               <div className='image'>
                 <img src={quote.hero} alt='' />
               </div>
-            <div className='name'>{quote.name}</div>
-          </div>
+              <div className='name'>{quote.name}</div>
             </div>
+          </div>
         ))}
       </div>
     </section>

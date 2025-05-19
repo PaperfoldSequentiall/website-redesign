@@ -36,10 +36,12 @@
     align-items: center;
     justify-content: center;
     gap: 1.25vw;
+    row-gap: 2.604169vw;
 
     .Card {
       display: flex;
       flex-direction: column;
+      width: 28.333333vw;
 
       .image {
         width: 28.333333vw;
@@ -58,12 +60,15 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        padding: 0.5208354vw 0;
+        text-transform: uppercase;
       }
 
       .cardDesc {
         color: #545469;
         font-family: Outfit;
-        font-size: 1.07;
+        font-size: 1.25vw;
+        width: 90%;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
